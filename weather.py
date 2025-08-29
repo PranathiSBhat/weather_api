@@ -55,7 +55,7 @@ def weather():
             cursor.execute("SELECT * FROM weather_data WHERE city = %s ORDER BY record_date DESC", (city,))
             data = cursor.fetchall()
 
-    return render_template("frontend/weather.html", city=city, data=data)
+    return render_template("weather.html", city=city, data=data)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",debug=True)
