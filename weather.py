@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request
 import requests
-import mysql.connector
+#import mysql.connector
+import pymysql
 from datetime import datetime
 
 app = Flask(__name__)
 
 
-db = mysql.connector.connect(
+db = pymysql.connect(
     host="localhost",
     user="root",
     password="root",
