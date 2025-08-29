@@ -11,7 +11,8 @@ db = mysql.connector.connect(
     host="localhost",
     user="root",
     password="root",
-    database="weather_data"
+    database="weather_data",
+    port = '3306'
 )
 cursor = db.cursor()
 
